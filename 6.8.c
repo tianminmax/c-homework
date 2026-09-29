@@ -10,52 +10,6 @@
 // 注：输出的前两个数字为鞍点所在的行和列，第三个数字为鞍点的值，输入时是按行输入，即先输入第一行数据在输入第二行以此类推
 
 
-// #include <stdio.h>
-
-// int main()
-// {
-//     int a[3][3];
-//     int i, j, k, max, min;
-//     int row, col;
-
-//     for (i = 0; i < 3; i++)
-//     {
-//         for (j = 0; j < 3; j++) {
-//             scanf("%d", &a[i][j]);
-//         }
-//     }
-
-//     for (i = 0; i < 3; i++)
-//     {
-
-//         max = a[i][0];
-//         for (j = 0; j < 3; j++)
-//         {
-//             if (a[i][j] > max)
-//             {
-//                 max = a[i][j];
-//                 row = i;
-//                 col = j;
-//             }
-//         }
-
-//         min = a[0][col];
-//         for (k = 0; k < 3; k++)
-//         {
-//             if (a[k][col] < min)
-//             {
-//                 min = a[k][col];
-//             }
-//         }
-
-//         if (max == min)
-//         {
-//             printf("%d,%d,%d\n", row, col, max);
-//             return 0;
-//         }
-//     }
-// }
-
 
 #include <stdio.h>
 
@@ -64,6 +18,7 @@ int main()
     int a[3][3];
     int row, col;
     int max;
+    int count = 0;
 
     for (int i = 0; i < 3; i++)
     {
@@ -92,11 +47,15 @@ int main()
             }
             else if (k == 2)
             {
+                count++;
                 printf("%d,%d,%d\n", row, col, max);
                 return 0;
             }
         }
 
 
+    }
+    if (!count) {
+        printf("not exist\n");
     }
 }
