@@ -1,0 +1,11 @@
+# 忽略所有文件
+*
+
+# 但保留 C 源文件
+!*.c
+
+# 保留 .gitignore 本身
+!.gitignore
+
+# 保留README.md
+!README.md
