@@ -23,5 +23,27 @@
 // qw
 // tr
 // yh
+#include <stdio.h>
+#include <string.h>
 
+int main() {
+    char input[10][3]= {"\0"};
+    for (int i = 0; i < 10; i++) {
+        scanf("%s",input[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        for (int j = i+1; j < 10; j++) {
+            if (strcmp(input[i],input[j])>0) {
+                char temp[3] = {"\0"};
+                strcpy(temp,input[i]);
+                strcpy(input[i],input[j]);
+                strcpy(input[j],temp);
+            }
 
+        }
+    }
+    for (int i = 0; i < 10; i++) {
+        printf("%s\n",input[i]);
+    }
+    return 0;
+}
