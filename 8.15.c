@@ -20,7 +20,7 @@
 
 #include <stdio.h>
 
-void average_first_course(int (*grade)[5], int n) {
+void average_first_course(int grade[][5], int n) {
     int sum = 0;
     for (int i = 0; i < n; i++) {
         sum += grade[i][0];
@@ -29,7 +29,7 @@ void average_first_course(int (*grade)[5], int n) {
 }
 
 
-void find_two_fail(char (*name)[20], int *id, int (*grade)[5], int n) {
+void find_two_fail(char name[][20], int *id, int grade[][5], int n) {
     for (int i = 0; i < n; i++) {
         int fail_count = 0;
         int sum = 0;
@@ -50,7 +50,7 @@ void find_two_fail(char (*name)[20], int *id, int (*grade)[5], int n) {
 }
 
 
-void find_high_score(char (*name)[20], int *id, int (*grade)[5], int n) {
+void find_high_score(char name[][20], int *id, int grade[][5], int n) {
     for (int i = 0; i < n; i++) {
         int sum = 0;
         int all_above_85 = 1;
